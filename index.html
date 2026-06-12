@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mente Joven – Tu bienestar importa</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">🧠 Mente Joven</div>
+    <div class="nav-links">
+      <a href="#autoestima">Autoestima</a>
+      <a href="#estres">Estrés</a>
+      <a href="#presion">Presión social</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#habitos">Hábitos</a>
+      <a href="#buzon" class="nav-cta">Buzón</a>
+    </div>
+    <button class="hamburger" id="hbg" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mob-menu">
+    <a href="#autoestima" onclick="closeMob()">💜 Autoestima</a>
+    <a href="#estres" onclick="closeMob()">🌿 Estrés académico</a>
+    <a href="#presion" onclick="closeMob()">🌐 Presión social</a>
+    <a href="#recursos" onclick="closeMob()">🤝 Recursos</a>
+    <a href="#habitos" onclick="closeMob()">✨ Hábitos</a>
+    <a href="#encuesta" onclick="closeMob()">📊 Encuestas</a>
+    <a href="#buzon" onclick="closeMob()">📬 Buzón</a>
+  </div>
+</nav>
+
+<!-- AVISO -->
+<div class="aviso">
+  ⚠️ <span>Aviso:</span> Este sitio tiene fines <span>educativos e informativos</span> únicamente. No sustituye la atención de un profesional de la salud mental. Si necesitas ayuda, busca a un adulto de confianza o a un profesional.
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="blob1 hero-bg-blob"></div>
+  <div class="blob2 hero-bg-blob"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge"><span class="dot"></span> Para estudiantes de secundaria</div>
+      <h1 class="hero-title">Tu <span class="grad">mente</span> merece el mismo cuidado que tu cuerpo</h1>
+      <p class="hero-sub">Un espacio seguro para entender tus emociones, fortalecer tu autoestima y aprender a manejar el estrés del día a día.</p>
+      <div class="hero-phrase" id="hero-phrase">Cargando frase...</div>
+      <div class="hero-btns">
+        <a href="#autoestima" class="btn btn-primary">Comenzar a explorar →</a>
+        <a href="#buzon" class="btn btn-ghost">📬 Buzón anónimo</a>
+      </div>
+    </div>
+    <div class="hero-ilu">
+      <!-- Inline SVG Illustration -->
+      <svg viewBox="0 0 420 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Background circle -->
+        <circle cx="210" cy="190" r="170" fill="url(#grad1)" opacity=".15"/>
+        <!-- Body -->
+        <ellipse cx="210" cy="310" rx="70" ry="28" fill="#c4b5fd" opacity=".4"/>
+        <rect x="168" y="230" width="84" height="90" rx="20" fill="#8b5cf6"/>
+        <rect x="178" y="310" width="22" height="40" rx="11" fill="#7c3aed"/>
+        <rect x="220" y="310" width="22" height="40" rx="11" fill="#7c3aed"/>
+        <!-- Head -->
+        <circle cx="210" cy="210" r="52" fill="#fde68a"/>
+        <circle cx="210" cy="210" r="52" fill="url(#grad2)" opacity=".3"/>
+        <!-- Hair -->
+        <path d="M158 200 Q160 148 210 145 Q260 148 262 200" fill="#5b21b6"/>
+        <ellipse cx="160" cy="202" rx="10" ry="16" fill="#5b21b6"/>
+        <ellipse cx="260" cy="202" rx="10" ry="16" fill="#5b21b6"/>
+        <!-- Eyes -->
+        <circle cx="194" cy="210" r="8" fill="#1e1b4b"/>
+        <circle cx="226" cy="210" r="8" fill="#1e1b4b"/>
+        <circle cx="196" cy="207" r="3" fill="white"/>
+        <circle cx="228" cy="207" r="3" fill="white"/>
+        <!-- Smile -->
+        <path d="M196 228 Q210 240 224 228" stroke="#1e1b4b" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <!-- Arms -->
+        <rect x="120" y="238" width="52" height="22" rx="11" fill="#8b5cf6" transform="rotate(-20 120 238)"/>
+        <rect x="264" y="234" width="52" height="22" rx="11" fill="#8b5cf6" transform="rotate(20 264 234)"/>
+        <!-- Heart -->
+        <path d="M200 170 C200 163 193 158 188 163 C183 168 183 175 200 185 C217 175 217 168 212 163 C207 158 200 163 200 170Z" fill="#f43f5e" transform="scale(1.4) translate(-63 -50)"/>
+        <!-- Stars -->
+        <text x="80" y="100" font-size="20" opacity=".6">✦</text>
+        <text x="320" y="80" font-size="16" opacity=".5">✦</text>
+        <text x="340" y="280" font-size="14" opacity=".4">✦</text>
+        <text x="65" y="300" font-size="18" opacity=".5">✦</text>
+        <defs>
+          <linearGradient id="grad1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#6366f1"/>
+            <stop offset="100%" stop-color="#38bdf8"/>
+          </linearGradient>
+          <linearGradient id="grad2" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#fde68a"/>
+            <stop offset="100%" stop-color="#fca5a5"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="float-card c1"><span class="icon">💜</span> Tú no estás solo/a</div>
+      <div class="float-card c2"><span class="icon">🌱</span> Crecer está bien</div>
+    </div>
+  </div>
+</section>
+
+<!-- FRASE MOTIVADORA -->
+<div class="phrase-bar">
+  <p>✨ Frase del momento</p>
+  <blockquote id="daily-phrase">...</blockquote>
+  <button class="phrase-refresh" onclick="newPhrase()">🔄 Nueva frase</button>
+</div>
+
+<!-- AUTOESTIMA -->
+<section id="autoestima">
+  <div class="sec-inner">
+    <div class="fade-in">
+      <span class="sec-tag">💜 Autoestima</span>
+      <h2 class="sec-title">Tu valor no depende de la opinión de nadie</h2>
+      <p class="sec-desc">La autoestima es la forma en que te ves y te valoras a ti mismo/a. No es arrogancia, es respeto propio.</p>
+    </div>
+    <div class="cards-grid fade-in">
+      <div class="card">
+        <div class="card-icon">🪞</div>
+        <h3>¿Qué es la autoestima?</h3>
+        <p>Es el conjunto de pensamientos, sentimientos y evaluaciones que tienes sobre ti mismo. Una autoestima saludable significa reconocer tanto tus fortalezas como tus áreas de mejora sin juzgarte duramente.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌟</div>
+        <h3>Señales de autoestima sana</h3>
+        <p>Puedes decir "no" sin sentirte culpable, reconoces tus logros, aceptas críticas sin derrumbarte, y no necesitas la aprobación constante de los demás para sentirte bien.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🛡️</div>
+        <h3>Cuando baja la autoestima</h3>
+        <p>Puede aparecer como autocrítica excesiva, miedo a equivocarse, compararte constantemente con otros o sentir que no eres suficiente. Todos pasamos por esto en algún momento.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔑</div>
+        <h3>Consejos para fortalecerla</h3>
+        <p>Habla contigo mismo/a como lo harías con un amigo, celebra tus pequeños logros, rodéate de personas que te sumen, y recuerda que los errores son parte del aprendizaje.</p>
+      </div>
+    </div>
+
+    <div class="exercise-box fade-in">
+      <h3>🌸 Ejercicio: "El espejo de mis fortalezas"</h3>
+      <div class="ex-steps">
+        <div class="ex-step"><div class="ex-num">1</div><p>Toma un cuaderno o papel. Escribe tu nombre en el centro y rodéalo con 5 palabras que te describan positivamente (no importa si son pequeñas: "soy puntual", "cuido a mis amigos").</p></div>
+        <div class="ex-step"><div class="ex-num">2</div><p>Piensa en un momento en que superaste algo difícil. ¿Qué habilidad usaste? Anótala. Eso también eres tú.</p></div>
+        <div class="ex-step"><div class="ex-num">3</div><p>Pregunta a alguien de confianza (familiar, amigo/a) qué cualidad valora más en ti. A veces los demás ven lo que nosotros no vemos.</p></div>
+        <div class="ex-step"><div class="ex-num">4</div><p>Repite este ejercicio cada semana. Notarás cómo tu lista crece y tu percepción de ti mismo/a cambia.</p></div>
+      </div>
+    </div>
+
+    <!-- TEST AUTOESTIMA -->
+    <div class="test-block fade-in">
+      <h3>📋 Test informativo de autoestima</h3>
+      <p class="test-note">⚠️ Este test es solo orientativo y educativo, no es un diagnóstico clínico.</p>
+      <div id="test-ae">
+        <div class="test-q">
+          <p>1. ¿Con qué frecuencia sientes que eres una persona valiosa?</p>
+          <div class="test-options">
+            <button class="test-opt" data-g="ae" data-q="1" data-v="3" onclick="selOpt(this)">Casi siempre</button>
+            <button class="test-opt" data-g="ae" data-q="1" data-v="2" onclick="selOpt(this)">A veces</button>
+            <button class="test-opt" data-g="ae" data-q="1" data-v="1" onclick="selOpt(this)">Pocas veces</button>
+            <button class="test-opt" data-g="ae" data-q="1" data-v="0" onclick="selOpt(this)">Casi nunca</button>
+          </div>
+        </div>
+        <div class="test-q">
+          <p>2. Cuando cometes un error, ¿cómo reaccionas?</p>
+          <div class="test-options">
+            <button class="test-opt" data-g="ae" data-q="2" data-v="3" onclick="selOpt(this)">Lo acepto y aprendo</button>
+            <button class="test-opt" data-g="ae" data-q="2" data-v="2" onclick="selOpt(this)">Me cuesta pero lo supero</button>
+            <button class="test-opt" data-g="ae" data-q="2" data-v="1" onclick="selOpt(this)">Me critico mucho</button>
+            <button class="test-opt" data-g="ae" data-q="2" data-v="0" onclick="selOpt(this)">Me quedo bloqueado/a</button>
+          </div>
+        </div>
+        <div class="test-q">
+          <p>3. ¿Te comparas frecuentemente con otras personas?</p>
+          <div class="test-options">
+            <button class="test-opt" data-g="ae" data-q="3" data-v="3" onclick="selOpt(this)">Rara vez</button>
+            <button class="test-opt" data-g="ae" data-q="3" data-v="2" onclick="selOpt(this)">A veces</button>
+            <button class="test-opt" data-g="ae" data-q="3" data-v="1" onclick="selOpt(this)">Con bastante frecuencia</button>
+            <button class="test-opt" data-g="ae" data-q="3" data-v="0" onclick="selOpt(this)">Todo el tiempo</button>
+          </div>
+        </div>
+        <div class="test-q">
+          <p>4. ¿Puedes expresar lo que piensas sin miedo excesivo al juicio?</p>
+          <div class="test-options">
+            <button class="test-opt" data-g="ae" data-q="4" data-v="3" onclick="selOpt(this)">Sí, generalmente</button>
+            <button class="test-opt" data-g="ae" data-q="4" data-v="2" onclick="selOpt(this)">Depende del contexto</button>
+            <button class="test-opt" data-g="ae" data-q="4" data-v="1" onclick="selOpt(this)">Me cuesta mucho</button>
+            <button class="test-opt" data-g="ae" data-q="4" data-v="0" onclick="selOpt(this)">Casi nunca lo hago</button>
+          </div>
+        </div>
+        <button class="test-submit" onclick="calcTest('ae', 12)">Ver resultado →</button>
+        <div class="test-result" id="res-ae"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESTRÉS -->
+<section id="estres">
+  <div class="sec-inner">
+    <div class="fade-in">
+      <span class="sec-tag">🌿 Estrés Académico</span>
+      <h2 class="sec-title">El estrés es normal. Desbordarte no tiene que serlo.</h2>
+      <p class="sec-desc">Estudiar, cumplir expectativas, hacer actividades extracurriculares... La presión académica es real. Aquí aprenderás a manejarla.</p>
+    </div>
+    <div class="two-col fade-in">
+      <div>
+        <h3 style="font-size:1.1rem;font-weight:800;margin-bottom:16px;color:var(--slate)">⚡ Causas comunes</h3>
+        <div class="tag-cloud" style="margin-bottom:28px">
+          <span class="tag t1">Exámenes frecuentes</span>
+          <span class="tag t2">Falta de tiempo</span>
+          <span class="tag t3">Presión familiar</span>
+          <span class="tag t1">Muchas tareas</span>
+          <span class="tag t2">Miedo al fracaso</span>
+          <span class="tag t3">Perfeccionismo</span>
+          <span class="tag t1">Poco sueño</span>
+          <span class="tag t2">Comparación</span>
+        </div>
+        <h3 style="font-size:1.1rem;font-weight:800;margin-bottom:16px;color:var(--slate)">🧠 Señales de alerta</h3>
+        <div class="tips-list">
+          <div class="tip-item">
+            <span class="ti">😴</span>
+            <div><h4>Problemas para dormir</h4><p>Dar vueltas en la cama pensando en pendientes es una señal de que el estrés está afectando tu descanso.</p></div>
+          </div>
+          <div class="tip-item">
+            <span class="ti">🤯</span>
+            <div><h4>Dificultad para concentrarse</h4><p>Si no puedes enfocarte en nada durante más de 10 minutos, tu mente puede estar saturada.</p></div>
+          </div>
+          <div class="tip-item">
+            <span class="ti">😤</span>
+            <div><h4>Irritabilidad frecuente</h4><p>Molestarte fácilmente con familia o amigos puede ser el estrés buscando una salida.</p></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-size:1.1rem;font-weight:800;margin-bottom:16px;color:var(--slate)">✅ Técnicas que funcionan</h3>
+        <div class="tips-list">
+          <div class="tip-item">
+            <span class="ti">📅</span>
+            <div><h4>Planifica con una agenda</h4><p>Anota tus tareas y fechas de entrega. Tener todo escrito libera espacio mental y reduce la sensación de caos.</p></div>
+          </div>
+          <div class="tip-item">
+            <span class="ti">🍅</span>
+            <div><h4>Técnica Pomodoro</h4><p>Estudia 25 minutos, descansa 5. Después de 4 ciclos, toma un descanso largo de 20 min. Tu concentración mejorará notablemente.</p></div>
+          </div>
+          <div class="tip-item">
+            <span class="ti">🌬️</span>
+            <div><h4>Respiración 4-7-8</h4><p>Inhala 4 segundos, aguanta 7, exhala 8. Repite 3 veces antes de un examen para calmar el sistema nervioso.</p></div>
+          </div>
+          <div class="tip-item">
+            <span class="ti">🎯</span>
+            <div><h4>Divide y vencerás</h4><p>Cuando algo parece imposible, divídelo en pasos pequeños. El primer paso siempre es el más importante.</p></div>
+          </div>
+          <div class="tip-item">
+            <span class="ti">📵</span>
+            <div><h4>Zonas libres de pantalla</h4><p>Estudia sin notificaciones. Activa el modo "no molestar" y guarda el teléfono. 45 minutos enfocado valen más que 3 horas distraído.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEST ESTRÉS -->
+    <div class="test-block fade-in" id="estres-test">
+      <h3>📊 Test de manejo del estrés</h3>
+      <p class="test-note">⚠️ Informativo. No reemplaza una evaluación profesional.</p>
+      <div class="test-q">
+        <p>1. ¿Cómo describes tu nivel de estrés últimamente?</p>
+        <div class="test-options">
+          <button class="test-opt" data-g="st" data-q="1" data-v="3" onclick="selOpt(this)">Muy manejable</button>
+          <button class="test-opt" data-g="st" data-q="1" data-v="2" onclick="selOpt(this)">Moderado</button>
+          <button class="test-opt" data-g="st" data-q="1" data-v="1" onclick="selOpt(this)">Bastante alto</button>
+          <button class="test-opt" data-g="st" data-q="1" data-v="0" onclick="selOpt(this)">Muy alto, sin control</button>
+        </div>
+      </div>
+      <div class="test-q">
+        <p>2. ¿Tienes estrategias para calmarte cuando te sientes abrumado/a?</p>
+        <div class="test-options">
+          <button class="test-opt" data-g="st" data-q="2" data-v="3" onclick="selOpt(this)">Sí, varias efectivas</button>
+          <button class="test-opt" data-g="st" data-q="2" data-v="2" onclick="selOpt(this)">Algunas, no siempre funcionan</button>
+          <button class="test-opt" data-g="st" data-q="2" data-v="1" onclick="selOpt(this)">Pocas y poco efectivas</button>
+          <button class="test-opt" data-g="st" data-q="2" data-v="0" onclick="selOpt(this)">No tengo ninguna</button>
+        </div>
+      </div>
+      <div class="test-q">
+        <p>3. ¿Tu estrés afecta tu sueño, apetito o relaciones?</p>
+        <div class="test-options">
+          <button class="test-opt" data-g="st" data-q="3" data-v="3" onclick="selOpt(this)">Casi nada</button>
+          <button class="test-opt" data-g="st" data-q="3" data-v="2" onclick="selOpt(this)">Un poco</button>
+          <button class="test-opt" data-g="st" data-q="3" data-v="1" onclick="selOpt(this)">Bastante</button>
+          <button class="test-opt" data-g="st" data-q="3" data-v="0" onclick="selOpt(this)">Mucho, todo el tiempo</button>
+        </div>
+      </div>
+      <button class="test-submit" onclick="calcTest('st', 9)">Ver resultado →</button>
+      <div class="test-result" id="res-st"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRESIÓN SOCIAL -->
+<section id="presion">
+  <div class="sec-inner">
+    <div class="fade-in">
+      <span class="sec-tag">🌐 Presión Social</span>
+      <h2 class="sec-title">Las redes muestran highlights, no la vida real</h2>
+      <p class="sec-desc">Compararte con lo que ves en Instagram o TikTok es comparar tu día a día con el mejor momento editado de otra persona.</p>
+    </div>
+    <div class="social-grid fade-in">
+      <div class="social-card red">
+        <div class="big">📱</div>
+        <h3>Redes sociales</h3>
+        <p>El 90% de lo que ves en redes es una versión cuidadosamente seleccionada y editada de la realidad. Nadie publica sus días malos.</p>
+      </div>
+      <div class="social-card blue">
+        <div class="big">⚖️</div>
+        <h3>La trampa de la comparación</h3>
+        <p>Cada persona tiene su propio ritmo. Compararte solo tiene sentido con la versión de ti mismo/a de ayer, no con otra persona.</p>
+      </div>
+      <div class="social-card purple">
+        <div class="big">🎭</div>
+        <h3>Presión del grupo</h3>
+        <p>Sentir que debes actuar de cierta forma para encajar es normal, pero tu identidad es más valiosa que la aprobación temporal del grupo.</p>
+      </div>
+    </div>
+
+    <div class="confidence-strip fade-in">
+      <h3>💪 Cómo desarrollar confianza en ti mismo/a</h3>
+      <div class="conf-item">
+        <h4>🎯 Define tus valores</h4>
+        <p>¿Qué es importante para ti? Cuando sabes qué valoras, tomar decisiones propias se vuelve más fácil.</p>
+      </div>
+      <div class="conf-item">
+        <h4>🚫 Aprende a decir "no"</h4>
+        <p>Decir no a algo que no quieres hacer no te hace mala persona. Te hace una persona con límites sanos.</p>
+      </div>
+      <div class="conf-item">
+        <h4>📵 Descansa de las redes</h4>
+        <p>Tómate días sin revisar redes sociales. Notarás cómo mejora tu estado de ánimo con el tiempo.</p>
+      </div>
+      <div class="conf-item">
+        <h4>🌟 Celebra tus logros propios</h4>
+        <p>No necesitas que otros validen lo que lograste. Date crédito por tus avances, sin importar el tamaño.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECURSOS -->
+<section id="recursos">
+  <div class="sec-inner">
+    <div class="fade-in">
+      <span class="sec-tag">🤝 Recursos de Ayuda</span>
+      <h2 class="sec-title">Pedir ayuda es un acto de valentía</h2>
+      <p class="sec-desc">No tienes que cargar solo/a con todo. Hay personas y herramientas que pueden acompañarte.</p>
+    </div>
+    <div class="resources-grid fade-in">
+      <div class="res-card">
+        <div class="ri">🧘</div>
+        <h3>Bienestar emocional diario</h3>
+        <p>Dedica 10 minutos al día a algo que genuinamente disfrutes. El bienestar no es un lujo, es una necesidad básica.</p>
+      </div>
+      <div class="res-card">
+        <div class="ri">📝</div>
+        <h3>Journaling / Diario emocional</h3>
+        <p>Escribir tus pensamientos y emociones ayuda a procesarlos. No necesita ser perfecto, solo honesto.</p>
+      </div>
+      <div class="res-card">
+        <div class="ri">🎵</div>
+        <h3>Música y arte terapéutico</h3>
+        <p>Escuchar música, dibujar, pintar o bailar son formas válidas de procesar emociones difíciles.</p>
+      </div>
+      <div class="res-card">
+        <div class="ri">🌬️</div>
+        <h3>Técnicas de respiración</h3>
+        <p>La respiración consciente activa el sistema nervioso parasimpático, reduciendo la ansiedad en minutos.</p>
+      </div>
+      <div class="res-card">
+        <div class="ri">🏃</div>
+        <h3>Movimiento y ejercicio</h3>
+        <p>30 minutos de actividad física al día liberan endorfinas, mejoran el ánimo y reducen el estrés de forma natural.</p>
+      </div>
+      <div class="res-card">
+        <div class="ri">🌙</div>
+        <h3>Rutina de sueño</h3>
+        <p>Dormir 8-9 horas es fundamental para el cerebro adolescente. El sueño no es perder tiempo, es invertir en tu salud.</p>
+      </div>
+    </div>
+    <div class="help-banner fade-in">
+      <div class="hb-icon">🤲</div>
+      <div>
+        <h3>¿Cuándo buscar ayuda profesional?</h3>
+        <p>Si llevas más de dos semanas sintiendo tristeza profunda, ansiedad que no puedes controlar, o pensamientos que te preocupan, habla con un orientador escolar, médico o psicólogo. También puedes empezar por contárselo a un familiar o adulto de confianza. <strong>No tienes que estar en crisis para merecer apoyo.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HÁBITOS -->
+<section id="habitos">
+  <div class="sec-inner">
+    <div class="fade-in">
+      <span class="sec-tag">✨ Hábitos y Bienestar</span>
+      <h2 class="sec-title">Los pequeños hábitos construyen grandes cambios</h2>
+      <p class="sec-desc">No necesitas transformar tu vida de un día para otro. Pequeñas acciones consistentes crean resultados poderosos.</p>
+    </div>
+    <div class="habits-grid fade-in">
+      <div class="habit-card study">
+        <div class="hc-icon">📚</div>
+        <h3>Técnicas de estudio efectivas</h3>
+        <ul>
+          <li>Usa mapas mentales para conectar ideas</li>
+          <li>Practica el método Feynman: explica el tema como si enseñaras</li>
+          <li>Repasa el material dentro de las 24 horas siguientes a la clase</li>
+          <li>Estudia en bloques de 25 min (Pomodoro)</li>
+          <li>Elimina distracciones durante el estudio</li>
+        </ul>
+      </div>
+      <div class="habit-card sleep">
+        <div class="hc-icon">🌙</div>
+        <h3>Sueño reparador</h3>
+        <ul>
+          <li>Duerme entre 8 y 9 horas cada noche</li>
+          <li>Apaga pantallas 30 min antes de dormir</li>
+          <li>Mantén un horario fijo de sueño</li>
+          <li>Tu cerebro consolida la memoria mientras duermes</li>
+          <li>Una siesta de 20 min puede mejorar tu rendimiento</li>
+        </ul>
+      </div>
+      <div class="habit-card exercise">
+        <div class="hc-icon">🏃</div>
+        <h3>Movimiento y ejercicio</h3>
+        <ul>
+          <li>30 minutos de actividad física al día son suficientes</li>
+          <li>No tiene que ser en el gimnasio: baila, camina, anda en bici</li>
+          <li>El ejercicio mejora la concentración y el estado de ánimo</li>
+          <li>Reduce el cortisol (hormona del estrés)</li>
+          <li>Busca un deporte que genuinamente disfrutes</li>
+        </ul>
+      </div>
+      <div class="habit-card rest">
+        <div class="hc-icon">☕</div>
+        <h3>Descanso y organización</h3>
+        <ul>
+          <li>El descanso no es pereza, es recuperación necesaria</li>
+          <li>Planifica tu semana los domingos por la tarde</li>
+          <li>Incluye tiempo libre en tu agenda</li>
+          <li>Aprende a priorizar: urgente ≠ importante</li>
+          <li>Desconéctate digitalmente al menos una hora al día</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENCUESTA -->
+<section id="encuesta">
+  <div class="sec-inner">
+    <div class="fade-in">
+      <span class="sec-tag">📊 Encuestas</span>
+      <h2 class="sec-title">¿Qué piensan los jóvenes?</h2>
+      <p class="sec-desc">Vota de forma anónima. Tus respuestas nos ayudan a entender mejor la realidad de los estudiantes.</p>
+    </div>
+    <div class="enc-cards fade-in">
+      <div class="enc-card">
+        <p>¿Cuál es tu mayor fuente de estrés?</p>
+        <div class="enc-opts" id="enc1">
+          <button class="enc-opt" onclick="vote('enc1',this,'Los exámenes',0)">📝 Los exámenes <span class="enc-pct">—</span></button>
+          <button class="enc-opt" onclick="vote('enc1',this,'Las tareas',1)">📚 Las tareas <span class="enc-pct">—</span></button>
+          <button class="enc-opt" onclick="vote('enc1',this,'Las relaciones',2)">👥 Las relaciones <span class="enc-pct">—</span></button>
+          <button class="enc-opt" onclick="vote('enc1',this,'La presión familiar',3)">🏠 Presión familiar <span class="enc-pct">—</span></button>
+        </div>
+      </div>
+      <div class="enc-card">
+        <p>¿Cómo te sientes en las redes sociales?</p>
+        <div class="enc-opts" id="enc2">
+          <button class="enc-opt" onclick="vote('enc2',this,'Bien',0)">😊 Bien, me divierte <span class="enc-pct">—</span></button>
+          <button class="enc-opt" onclick="vote('enc2',this,'A veces mal',1)">😐 A veces me hace sentir mal <span class="enc-pct">—</span></button>
+          <button class="enc-opt" onclick="vote('enc2',this,'Me comparo',2)">😔 Me comparo mucho <span class="enc-pct">—</span></button>
+          <button class="enc-opt" onclick="vote('enc2',this,'Las evito',3)">📵 Prefiero evitarlas <span class="enc-pct">—</span></button>
+        </div>
+      </div>
+      <div class="enc-card">
+        <p>¿Con quién hablas cuando algo te preocupa?</p>
+        <div class="enc-opts" id="enc3">
+          <button class="enc-opt" onclick="vote('enc3',this,'Familia',0)">👨‍👩‍👧 Con mi familia <span class="enc-pct">—</span></button>
+          <button class="enc-opt" onclick="vote('enc3',this,'Amigos',1)">👯 Con amigos <span class="enc-pct">—</span></button>
+          <button class="enc-opt" onclick="vote('enc3',this,'Nadie',2)">🤐 Con nadie <span class="enc-pct">—</span></button>
+          <button class="enc-opt" onclick="vote('enc3',this,'Orientador',3)">🏫 Con orientador <span class="enc-pct">—</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUZÓN -->
+<section id="buzon">
+  <div class="sec-inner">
+    <div class="buzon-wrap fade-in">
+      <div class="buzon-info">
+        <span class="sec-tag">📬 Buzón Anónimo</span>
+        <h2 class="sec-title">Un espacio para expresarte sin filtros</h2>
+        <p>A veces lo que más necesitamos es decir algo en voz alta (o por escrito) sin miedo al juicio. Este buzón es tuyo.</p>
+        <p>Puedes compartir cómo te sientes, una experiencia que hayas vivido, un mensaje de aliento para otros jóvenes, o simplemente lo que llevas en el corazón.</p>
+        <div class="buzon-badges">
+          <div class="bz-badge">🔒 100% anónimo</div>
+          <div class="bz-badge">💜 Sin juicios</div>
+          <div class="bz-badge">🌱 Espacio seguro</div>
+        </div>
+      </div>
+      <div class="form-card">
+        <div id="buzon-form">
+          <h3>📝 Comparte tu mensaje</h3>
+          <div class="fld">
+            <label>¿Sobre qué tema quieres escribir?</label>
+            <select id="bz-tema">
+              <option value="">— Elige un tema —</option>
+              <option>Cómo me siento hoy</option>
+              <option>Algo que me preocupa</option>
+              <option>Un mensaje para otros jóvenes</option>
+              <option>Mi experiencia con el estrés</option>
+              <option>Mi experiencia con la presión social</option>
+              <option>Una reflexión personal</option>
+            </select>
+          </div>
+          <div class="fld">
+            <label>¿Cómo te describes hoy?</label>
+            <div class="radio-group">
+              <label class="radio-opt"><input type="radio" name="estado" value="feliz"> 😊 Bien</label>
+              <label class="radio-opt"><input type="radio" name="estado" value="neutral"> 😐 Regular</label>
+              <label class="radio-opt"><input type="radio" name="estado" value="triste"> 😔 Mal</label>
+              <label class="radio-opt"><input type="radio" name="estado" value="ansioso"> 😰 Ansioso/a</label>
+            </div>
+          </div>
+          <div class="fld">
+            <label>Tu mensaje (anónimo)</label>
+            <textarea id="bz-msg" rows="5" placeholder="Escribe lo que sientes, una experiencia o un mensaje de aliento..."></textarea>
+          </div>
+          <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="enviarBuzon()">Enviar mensaje 💌</button>
+        </div>
+        <div class="buzon-submitted" id="buzon-ok">
+          <div class="check">✅</div>
+          <h4>¡Gracias por compartir!</h4>
+          <p>Tu mensaje fue recibido de forma anónima. Recuerda: expresar lo que sientes es un acto de valentía. No estás solo/a. 💜</p>
+          <button class="btn btn-ghost" style="margin-top:16px" onclick="resetBuzon()">Enviar otro mensaje</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-main-msg">
+      💜 "No estás solo/a. Pedir ayuda es una muestra de valentía y de amor propio."
+    </div>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="fl">🧠 Mente Joven</div>
+        <p>Un espacio seguro creado para estudiantes de secundaria que quieren entender y cuidar su salud mental.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Secciones</h4>
+        <a href="#autoestima">💜 Autoestima</a>
+        <a href="#estres">🌿 Estrés académico</a>
+        <a href="#presion">🌐 Presión social</a>
+        <a href="#recursos">🤝 Recursos</a>
+        <a href="#habitos">✨ Hábitos</a>
+        <a href="#buzon">📬 Buzón anónimo</a>
+      </div>
+      <div class="footer-col">
+        <h4>Importante</h4>
+        <p style="font-size:.82rem;line-height:1.7">Este sitio es de carácter <strong style="color:white">educativo e informativo</strong>. No sustituye la atención psicológica profesional. Si estás en crisis, busca ayuda de inmediato con un adulto de confianza.</p>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <span>© 2025 Mente Joven — Proyecto estudiantil de concientización</span>
+      <span>Hecho con 💜 para jóvenes que merecen apoyo</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
